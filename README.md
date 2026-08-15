@@ -2,7 +2,7 @@
 
 A Quickshell bar widget for Omarchy Quattro that displays workspace numbers as Japanese numerals.
 
-Workspaces 1–10 are rendered as `一 二 三 四 五 六 七 八 九 十`. Occupied and focused workspace behavior follows Omarchy's native Workspaces widget.
+Workspaces 1–10 are rendered as bold Japanese numerals: `一 二 三 四 五 六 七 八 九 十`. The focused workspace keeps its numeral and uses the active theme's accent color.
 
 ## Requirements
 

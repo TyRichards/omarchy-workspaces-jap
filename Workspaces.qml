@@ -40,16 +40,18 @@ BarWidget {
   }
 
   readonly property real trailingGap: root.vertical ? 0 : Style.spaceReal(1.5)
+  readonly property real outerPadding: root.vertical ? 0 : Style.spaceReal(5)
 
-  implicitWidth: grid.implicitWidth + trailingGap
+  implicitWidth: grid.implicitWidth + trailingGap + outerPadding * 2
   implicitHeight: grid.implicitHeight
 
   GridLayout {
     id: grid
     anchors.fill: parent
-    anchors.rightMargin: root.trailingGap
+    anchors.leftMargin: root.outerPadding
+    anchors.rightMargin: root.trailingGap + root.outerPadding
     columns: root.vertical ? 1 : root.workspaceIds().length
-    columnSpacing: root.vertical ? 0 : Style.space(5)
+    columnSpacing: root.vertical ? 0 : Style.space(6)
     rowSpacing: root.vertical ? Style.space(2) : 0
 
     Repeater {
@@ -63,7 +65,8 @@ BarWidget {
         readonly property bool focused: Hyprland.focusedWorkspace !== null && Hyprland.focusedWorkspace.id === modelData
 
         bar: root.bar
-        text: root.workspaceLabel(modelData)
+        text: "<b>" + root.workspaceLabel(modelData) + "</b>"
+        fontSize: Style.font.body - 1
         active: focused
         activeColor: Color.accent
         opacity: occupied || focused ? 1 : 0.5
