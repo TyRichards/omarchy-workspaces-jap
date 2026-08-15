@@ -4,6 +4,8 @@ A Quickshell bar widget for Omarchy Quattro that displays workspace numbers as J
 
 Workspaces 1–10 are rendered as bold Japanese numerals: `一 二 三 四 五 六 七 八 九 十`. The focused workspace keeps its numeral and uses the active theme's accent color.
 
+![Workspaces (JAP) preview](preview.png)
+
 ## Requirements
 
 - Omarchy Quattro
