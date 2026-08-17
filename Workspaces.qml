@@ -65,7 +65,7 @@ BarWidget {
         readonly property bool focused: Hyprland.focusedWorkspace !== null && Hyprland.focusedWorkspace.id === modelData
 
         bar: root.bar
-        text: root.workspaceLabel(modelData)
+        text: "<b>" + root.workspaceLabel(modelData) + "</b>"
         fontSize: Style.font.body - 1
         active: focused
         activeColor: Color.accent
