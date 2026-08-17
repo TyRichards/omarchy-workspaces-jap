@@ -52,7 +52,7 @@ BarWidget {
     anchors.rightMargin: root.trailingGap + root.outerPadding
     columns: root.vertical ? 1 : root.workspaceIds().length
     columnSpacing: root.vertical ? 0 : Style.space(6)
-    rowSpacing: root.vertical ? Style.space(1) : 0
+    rowSpacing: root.vertical ? -Style.space(1) : 0
 
     Repeater {
       model: root.workspaceIds()
