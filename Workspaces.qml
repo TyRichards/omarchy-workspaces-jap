@@ -66,7 +66,7 @@ BarWidget {
 
         bar: root.bar
         text: "<b>" + root.workspaceLabel(modelData) + "</b>"
-        fontSize: Style.font.body - 1
+        fontSize: Style.font.body - 2
         active: focused
         activeColor: Color.accent
         opacity: occupied || focused ? 1 : 0.5
